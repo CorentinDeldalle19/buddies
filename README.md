@@ -1,5 +1,5 @@
 # projetAppMobile
-Nom de projet : Pas encore trouvé
+Nom de projet : buddies
 
 Participants : 
 - LOSAT Giovanni
