@@ -4,6 +4,7 @@
     "password": "root",
     "database": "buddies",
     "host": "localhost",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "port": 8889
   }
 }
