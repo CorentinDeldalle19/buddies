@@ -14,3 +14,7 @@ Exigences :
 - Utilisation de Isar (ou autre, BDD locale)
 -Utilisation de Riverpod (Injection dépendence)
 - Affichage d'une image (URL ou Locale)
+
+
+maquette :
+https://www.figma.com/design/96OCGXyamk64YN0TQDSPPj/BuddiesVibe?node-id=0-1&t=Nfzg8oRQhDNcoQ1y-1
