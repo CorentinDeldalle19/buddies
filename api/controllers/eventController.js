@@ -2,15 +2,7 @@ const {Event} = require('../models');
 
 exports.createEvent =  async (req, res) => {
     try {
-        const newEvent = await Event.create({
-            name: req.body.name,
-            location: req.body.location,
-            style_of_music: req.body.style_of_music,
-            description: req.body.description,
-            restauration: req.body.restauration,
-            type: req.body.type,
-            date: req.body.date
-        });
+        const newEvent = await Event.create(req.body);
         res.status(201).json(newEvent);
     } catch (err) {
         res.status(400).json({ message: err.message });
@@ -31,6 +23,8 @@ exports.findOneEvent = async (req,res) => {
         const event = await Event.findByPk(req.params.id);
         if (!event) {
             res.status(404).json({message : 'Aucun event trouvé'})
+        } else{
+            res.status(200).json(event)
         }
     } catch (error) {
         res.status(400).json({message : error.message});

@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { sequelize } = require('./models');
+
 const personneRoutes = require('./routes/personneRoutes');
 const eventRoutes = require('./routes/eventRoutes');
+const listeSouhaitsRoutes = require('./routes/ListeSouhaitsRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,6 +14,7 @@ app.use(bodyParser.json());
 
 // Utiliser les routes
 app.use('/api/personnes', personneRoutes);
+app.use('/api/listes', listeSouhaitsRoutes);
 app.use('/api/events', eventRoutes);
 
 // Tester la connexion à la base de données
