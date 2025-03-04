@@ -8,8 +8,10 @@ const listeSouhaitsRoutes = require('./routes/ListeSouhaitsRoutes');
 const messageRoutes = require('./routes/messagesRoutes')
 const participationRoutes = require('./routes/participationRoutes');
 
+require('dotenv').config();
+
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 // Middleware pour parser les requêtes JSON
 app.use(bodyParser.json());
