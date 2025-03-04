@@ -5,6 +5,7 @@ const { sequelize } = require('./models');
 const personneRoutes = require('./routes/personneRoutes');
 const eventRoutes = require('./routes/eventRoutes');
 const listeSouhaitsRoutes = require('./routes/ListeSouhaitsRoutes');
+const messageRoutes = require('./routes/messagesRoutes')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,6 +17,7 @@ app.use(bodyParser.json());
 app.use('/api/personnes', personneRoutes);
 app.use('/api/listes', listeSouhaitsRoutes);
 app.use('/api/events', eventRoutes);
+app.use('/api/messages', messageRoutes)
 
 // Tester la connexion à la base de données
 sequelize.authenticate()

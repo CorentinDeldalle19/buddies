@@ -2,6 +2,11 @@ const {Event} = require('../models');
 
 exports.createEvent =  async (req, res) => {
     try {
+        const existingEvent = await Event.findByPk(req.body.id);
+        if (existingEvent) {
+            return res.status(400).json({ message: 'L\'ID de l\'événement existe déjà.' });
+        }
+
         const newEvent = await Event.create(req.body);
         res.status(201).json(newEvent);
     } catch (err) {
