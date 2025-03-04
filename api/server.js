@@ -6,6 +6,7 @@ const personneRoutes = require('./routes/personneRoutes');
 const eventRoutes = require('./routes/eventRoutes');
 const listeSouhaitsRoutes = require('./routes/ListeSouhaitsRoutes');
 const messageRoutes = require('./routes/messagesRoutes')
+const participationRoutes = require('./routes/participationRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -18,6 +19,7 @@ app.use('/api/personnes', personneRoutes);
 app.use('/api/listes', listeSouhaitsRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/messages', messageRoutes)
+app.use('/api/participations', participationRoutes);
 
 // Tester la connexion à la base de données
 sequelize.authenticate()
